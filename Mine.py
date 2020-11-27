@@ -2,8 +2,8 @@ from math import*
 
 
 def conversion_to_egrees(mas):
-    result = float((mas[2] / 3600) + (mas[1] / 60) + mas[0])
-    return result
+    res = float((mas[2] / 3600) + (mas[1] / 60) + mas[0])
+    return res
 
 
 def area(X_list, Y_list):
@@ -28,15 +28,15 @@ def area(X_list, Y_list):
 
 
 def taking_coordinates_lon(latitude):
-    result = 2 * pi_c * RE / 360 * (latitude - average_latitude)
-    return result
+    res = 2 * pi_c * RE / 360 * (latitude - average_latitude)
+    return res
 
 
-def taking_coordinates_lat(longitude):
+def taking_coordinates_lat(longit):
     koef = cos(radians(average_latitude))
-    result = float((longitude - average_longitude)
+    res = float((longit - average_longit)
                    * koef * (2*pi_c * RE) / 360)
-    return result
+    return res
 
 
 def fill_nulls(number):
@@ -68,7 +68,7 @@ count = sum = 0
 for i in range(1, len(egrees_list), 2):
     count += 1
     sum += egrees_list[i]
-average_longitude = float(sum / count)
+average_longit = float(sum / count)
 
 count = sum = 0
 for i in range(0, len(egrees_list), 2):

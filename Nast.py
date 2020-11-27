@@ -1,18 +1,18 @@
 def conv_egrees(massive):
-    result = float((massive[2] / 3600) + (massive[1] / 60) + massive[0])
-    return result
+    res = float((massive[2] / 3600) + (massive[1] / 60) + massive[0])
+    return res
 
 
 def lon_coord(latitude):
-    result = 2 * pi_const * RE / 360 * (latitude - AV_lat)
-    return result
+    res = 2 * pi_const * RE / 360 * (latitude - AV_lat)
+    return res
 
 
-def lat_coord(longitude):
+def lat_coord(longit):
     coef = cos(radians(AV_lat))
-    result = float((longitude - AV_long)
+    res = float((longit - AV_long)
                    * coef * (2*pi_const * RE) / 360)
-    return result
+    return res
 
 
 from math import*
