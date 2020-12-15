@@ -34,8 +34,7 @@ def taking_coordinates_lon(latitude):
 
 def taking_coordinates_lat(longit):
     koef = cos(radians(average_latitude))
-    res = float((longit - average_longit)
-                   * koef * (2*pi_c * RE) / 360)
+    res = float((longit - average_longit) * koef * (2*pi_c * RE) / 360)
     return res
 
 
